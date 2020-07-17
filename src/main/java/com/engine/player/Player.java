@@ -8,8 +8,10 @@ import com.engine.moves.MoveTransition;
 import com.engine.pieces.King;
 import com.engine.pieces.Piece;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public abstract class Player {
@@ -22,7 +24,7 @@ public abstract class Player {
     Player(final Board board, final Collection<Move> playerLegals, final Collection<Move> opponentLegals) {
         this.board = board;
         this.playerKing = establishKing();
-        this.isInCheck = !Player.calculateAttacksOnTile(this.playerKing.getPiecePosition(), opponentLegals).isEmpty();
+        this.isInCheck = calculateIfPlayerIsInCheck(opponentLegals);
         playerLegals.addAll(calculateKingCastles(playerLegals, opponentLegals));
         this.legalMoves = Collections.unmodifiableCollection(playerLegals);
     }
@@ -66,6 +68,12 @@ public abstract class Player {
                 .anyMatch(move -> makeMove(move).getMoveStatus().isDone());
     }
 
+    public boolean calculateIfPlayerIsInCheck(final Collection<Move> opponentMoves) {
+        int playerKingPosition = this.playerKing.getPiecePosition();
+        Collection<Move> attacksAgainstKing =  Player.calculateAttacksOnTile(playerKingPosition, opponentMoves );
+        return attacksAgainstKing.size() > 0;
+    }
+    
     protected boolean hasCastleOpportunities() {
         return !this.isInCheck && !this.playerKing.isCastled() &&
                 (this.playerKing.isKingSideCastleCapable() || this.playerKing.isQueenSideCastleCapable());
