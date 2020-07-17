@@ -17,8 +17,24 @@ import java.util.List;
 import static com.engine.pieces.Piece.PieceType.ROOK;
 
 public class WhitePlayer extends Player {
-    public WhitePlayer(final Board board, final Collection<Move> whiteStandardLegals,
-                       final Collection<Move> blackStandardLegals) {
+    private static final int WHITE_PLAYER_KING_CASTLE_STARTING_POSITION = 60;
+    private static final int WHITE_PLAYER_KING_CASTLE_EMPTY_POSITION_1 =  61;
+    private static final int WHITE_PLAYER_KING_CASTLE_EMPTY_POSITION_2 = 62;
+    private static final int WHITE_PLAYER_KING_SIDE_ROOK_POSITION = 63;
+    private static final int WHITE_PLAYER_KING_FRONT_TILE_POSITION = 52;
+    private static final int WHITE_PLAYER_KING_CASTLE_FINAL_POSITION = 62;
+    private static final int WHITE_PLAYER_KING_CASTLE_ROOK_FINAL_POSITION = 61;
+
+    private static final int WHITE_PLAYER_QUEEN_CASTLE_EMPTY_POSITION_1 = 57;
+    private static final int WHITE_PLAYER_QUEEN_CASTLE_EMPTY_POSITION_2 = 58;
+    private static final int WHITE_PLAYER_QUEEN_CASTLE_EMPTY_POSITION_3 = 59;
+
+    private static final int WHITE_PLAYER_QUEEN_SIDE_ROOK_POSITION = 56;
+    private static final int WHITE_PLAYER_QUEEN_CASTLE_FINAL_POSITION = 58;
+    private static final int WHITE_PLAYER_QUEEN_SIDE_ROOK_FINAL_POSITION = 59;
+
+
+    public WhitePlayer(final Board board, final Collection<Move> whiteStandardLegals, final Collection<Move> blackStandardLegals) {
         super(board, whiteStandardLegals, blackStandardLegals);
     }
 
@@ -31,41 +47,80 @@ public class WhitePlayer extends Player {
 
         final List<Move> kingCastles = new ArrayList<>();
 
-        if (this.playerKing.isFirstMove() && this.playerKing.getPiecePosition() == 60 && !this.isInCheck()) {
+        if (this.isKingFirstMoveAndNotInCheck()) {
             //whites king side castle
-            if (this.board.getPiece(61) == null && this.board.getPiece(62) == null) {
-                final Piece kingSideRook = this.board.getPiece(63);
+            if (this.noPiecesBetweenKingSideRook()) {
+                final Piece kingSideRook = this.board.getPiece(WHITE_PLAYER_KING_SIDE_ROOK_POSITION);
 
-                if (kingSideRook != null && kingSideRook.isFirstMove()) {
+                if (isKingSideRookFirstMove() && passThroughKingSideSquareAttackedByAnEnemy(legalMoves) &&
+                        kingSideRook.getPieceType() == ROOK) {
 
-                    if (Player.calculateAttacksOnTile(61, opponentLegals).isEmpty() &&
-                            Player.calculateAttacksOnTile(62, opponentLegals).isEmpty() &&
+                    if (Player.calculateAttacksOnTile(WHITE_PLAYER_KING_CASTLE_EMPTY_POSITION_1, opponentLegals).isEmpty() &&
+                            Player.calculateAttacksOnTile(WHITE_PLAYER_KING_CASTLE_EMPTY_POSITION_2, opponentLegals).isEmpty() &&
                             kingSideRook.getPieceType() == ROOK) {
 
-                        if (!BoardUtils.isKingPawnTrap(this.board, this.playerKing, 52)) {
-                            kingCastles.add(new KingSideCastleMove(this.board, this.playerKing, 62, (Rook) kingSideRook, kingSideRook.getPiecePosition(), 61));
+                        if (!BoardUtils.isKingPawnTrap(this.board, this.playerKing, WHITE_PLAYER_KING_FRONT_TILE_POSITION)) {
+                            kingCastles.add(new KingSideCastleMove(this.board, this.playerKing,
+                                    WHITE_PLAYER_KING_CASTLE_FINAL_POSITION, (Rook) kingSideRook, kingSideRook.getPiecePosition(),
+                                    WHITE_PLAYER_KING_CASTLE_ROOK_FINAL_POSITION));
                         }
                     }
                 }
             }
             //whites queen side castle
-            if (this.board.getPiece(59) == null && this.board.getPiece(58) == null &&
-                    this.board.getPiece(57) == null) {
-                final Piece queenSideRook = this.board.getPiece(56);
+            if (this.noPiecesBetweenQueenSideRook()) {
+                final Piece queenSideRook = this.board.getPiece(WHITE_PLAYER_QUEEN_SIDE_ROOK_POSITION);
 
-                if (queenSideRook != null && queenSideRook.isFirstMove()) {
+                    if (this.isQueenSideRookFirstMove() && this.passThroughQueenSideSquareAttackedByAnEnemy(legalMoves)
+                       && queenSideRook.getPieceType() == ROOK) {
 
-                    if (Player.calculateAttacksOnTile(58, opponentLegals).isEmpty() &&
-                            Player.calculateAttacksOnTile(59, opponentLegals).isEmpty() && queenSideRook.getPieceType() == ROOK) {
-
-                        if (!BoardUtils.isKingPawnTrap(this.board, this.playerKing, 52)) {
-                            kingCastles.add(new QueenSideCastleMove(this.board, this.playerKing, 58, (Rook) queenSideRook, queenSideRook.getPiecePosition(), 59));
+                        if (!BoardUtils.isKingPawnTrap(this.board, this.playerKing, WHITE_PLAYER_KING_FRONT_TILE_POSITION)) {
+                            kingCastles.add(new QueenSideCastleMove(this.board, this.playerKing,
+                                    WHITE_PLAYER_QUEEN_CASTLE_FINAL_POSITION, (Rook) queenSideRook,
+                                    queenSideRook.getPiecePosition(), WHITE_PLAYER_QUEEN_SIDE_ROOK_FINAL_POSITION));
                         }
                     }
                 }
-            }
+
         }
         return Collections.unmodifiableList(kingCastles);
+    }
+
+    private boolean isKingFirstMoveAndNotInCheck() {
+        return this.playerKing.isFirstMove() &&
+                this.playerKing.getPiecePosition() == WHITE_PLAYER_KING_CASTLE_STARTING_POSITION && !this.isInCheck();
+    }
+
+    private boolean noPiecesBetweenKingSideRook() {
+        return this.board.getPiece(WHITE_PLAYER_KING_CASTLE_EMPTY_POSITION_1) == null &&
+                this.board.getPiece(WHITE_PLAYER_KING_CASTLE_EMPTY_POSITION_2) == null;
+    }
+
+    private boolean isKingSideRookFirstMove() {
+        final Piece kingSideRook = this.board.getPiece(WHITE_PLAYER_KING_SIDE_ROOK_POSITION);
+        return kingSideRook != null && kingSideRook.isFirstMove();
+    }
+
+    private boolean passThroughKingSideSquareAttackedByAnEnemy(final Collection<Move> opponentLegals) {
+        return  Player.calculateAttacksOnTile(WHITE_PLAYER_KING_CASTLE_EMPTY_POSITION_1, opponentLegals).isEmpty() &&
+                Player.calculateAttacksOnTile(WHITE_PLAYER_KING_CASTLE_EMPTY_POSITION_2, opponentLegals).isEmpty();
+    }
+
+    private boolean noPiecesBetweenQueenSideRook() {
+        return this.board.getPiece(WHITE_PLAYER_QUEEN_CASTLE_EMPTY_POSITION_1) == null &&
+                this.board.getPiece(WHITE_PLAYER_QUEEN_CASTLE_EMPTY_POSITION_2) == null &&
+                this.board.getPiece(WHITE_PLAYER_QUEEN_CASTLE_EMPTY_POSITION_3) == null;
+    }
+
+    private boolean isQueenSideRookFirstMove() {
+        final Piece queenSideRook = this.board.getPiece(WHITE_PLAYER_QUEEN_SIDE_ROOK_POSITION);
+        return queenSideRook != null && queenSideRook.isFirstMove();
+    }
+
+    private boolean passThroughQueenSideSquareAttackedByAnEnemy(final Collection<Move> opponentLegals) {
+        return Player.calculateAttacksOnTile(WHITE_PLAYER_QUEEN_CASTLE_EMPTY_POSITION_2, opponentLegals).isEmpty() &&
+                Player.calculateAttacksOnTile(WHITE_PLAYER_QUEEN_CASTLE_EMPTY_POSITION_3, opponentLegals).isEmpty();
+
     }
 
     @Override
