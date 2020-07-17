@@ -27,12 +27,6 @@ public abstract class Player {
         this.legalMoves = Collections.unmodifiableCollection(playerLegals);
     }
 
-    protected static Collection<Move> calculateAttacksOnTile(final int tileNumber, final Collection<Move> moves) {
-        return moves.stream()
-                .filter(move -> move.getDestinationCoordinate() == tileNumber)
-                .collect(Collectors.toUnmodifiableList());
-    }
-
     public abstract Collection<Piece> getActivePieces();
 
     public abstract Alliance getAlliance();
@@ -40,18 +34,6 @@ public abstract class Player {
     public abstract Player getOpponent();
 
     protected abstract Collection<Move> calculateKingCastles(Collection<Move> playerLegals, Collection<Move> opponentLegals);
-
-    private King establishKing() {
-        return (King) getActivePieces().stream()
-                .filter(piece -> piece.getPieceType() == Piece.PieceType.KING)
-                .findAny()
-                .orElseThrow(RuntimeException::new);
-    }
-
-    private boolean hasEscapeMoves() {
-        return this.legalMoves.stream()
-                .anyMatch(move -> makeMove(move).getMoveStatus().isDone());
-    }
 
     public MoveTransition makeMove(final Move move) {
         if (!this.legalMoves.contains(move)) {
@@ -64,6 +46,24 @@ public abstract class Player {
 
         return opponent.isInCheck() ? new MoveTransition(this.board, this.board, move, MoveStatus.LEAVES_PLAYER_IN_CHECK) :
                 new MoveTransition(this.board, transitionBoard, move, MoveStatus.DONE);
+    }
+
+    protected static Collection<Move> calculateAttacksOnTile(final int tileNumber, final Collection<Move> moves) {
+        return moves.stream()
+                .filter(move -> move.getDestinationCoordinate() == tileNumber)
+                .collect(Collectors.toUnmodifiableList());
+    }
+
+    private King establishKing() {
+        return (King) getActivePieces().stream()
+                .filter(piece -> piece.getPieceType() == Piece.PieceType.KING)
+                .findAny()
+                .orElseThrow(RuntimeException::new);
+    }
+
+    private boolean hasEscapeMoves() {
+        return this.legalMoves.stream()
+                .anyMatch(move -> makeMove(move).getMoveStatus().isDone());
     }
 
     protected boolean hasCastleOpportunities() {
