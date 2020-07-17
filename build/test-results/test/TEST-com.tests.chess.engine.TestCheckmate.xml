@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tests.chess.engine.TestCheckmate" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-07-17T13:53:21" hostname="DESKTOP-3VQV89L" time="0.026">
+  <properties/>
+  <testcase name="assertTwoMoveCheckmateVariation" classname="com.tests.chess.engine.TestCheckmate" time="0.005"/>
+  <testcase name="assertScholarsMateCheckmate" classname="com.tests.chess.engine.TestCheckmate" time="0.006"/>
+  <testcase name="assertSevenMoveCheckmate" classname="com.tests.chess.engine.TestCheckmate" time="0.007"/>
+  <testcase name="assertTwoMoveCheckmate" classname="com.tests.chess.engine.TestCheckmate" time="0.003"/>
+  <testcase name="assertLegalTrapCheckmate" classname="com.tests.chess.engine.TestCheckmate" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

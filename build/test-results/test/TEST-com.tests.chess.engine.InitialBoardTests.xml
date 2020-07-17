@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tests.chess.engine.InitialBoardTests" tests="14" skipped="0" failures="0" errors="0" timestamp="2020-07-17T13:53:21" hostname="DESKTOP-3VQV89L" time="0.015">
+  <properties/>
+  <testcase name="assertPlayersStartingLegalMovesEqualTwenty" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertPieceOnTileThirtyTwoIsInvalid" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertOpponentPlayerIsBlack" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertOpponentIsNotUnderAnyThread" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertWhitePlayerToStringEqualsWhite" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertOpponentIsCastleCapable" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertAllStartingLegalMovesEqualForty" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertIsNotEndGame" classname="com.tests.chess.engine.InitialBoardTests" time="0.005"/>
+  <testcase name="assertCurrentPlayerIsCastleCapable" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertAllStartingPiecesEqualThirtyTwo" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertBlackPlayerToStringEqualsWhite" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertIsNotThreatenedBoardImmediate" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertCurrentPlayerIsWhite" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <testcase name="assertCurrentPlayerIsNotUnderAnyThread" classname="com.tests.chess.engine.InitialBoardTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

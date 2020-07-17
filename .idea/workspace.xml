@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8ec8351-4a87-4504-9bd8-6377445d0479" name="Default Changelist" comment="Move CastleMove abstract class from Move.java">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Bishop.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Bishop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Rook.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Rook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.BishopTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.BishopTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.BoardConsistencyTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.BoardConsistencyTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.InitialBoardTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.InitialBoardTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.KingTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.KingTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.PawnTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.PawnTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.PiecesTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.PiecesTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.PlainKingMoveTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.PlainKingMoveTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.RookTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.RookTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.TestCheckmate.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tests.chess.engine.TestCheckmate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.tests.chess.engine.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.tests.chess.engine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.BishopTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.BishopTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.BoardConsistencyTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.BoardConsistencyTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.InitialBoardTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.InitialBoardTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.KingTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.KingTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.PawnTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.PawnTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.PiecesTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.PiecesTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.PlainKingMoveTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.PlainKingMoveTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.RookTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.RookTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.TestCheckmate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.tests.chess.engine.TestCheckmate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/engine/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/engine/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/engine/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/engine/pieces/Rook.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/Jchess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/Alliance$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/Alliance$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/Alliance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/board/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/board/BoardBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/board/BoardUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/board/Tile$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/board/Tile$EmptyTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/board/Tile$OccupiedTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/board/Tile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/Move.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/MoveTransition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/AttackMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/CastleMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/KingSideCastleMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/MajorAttackMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/MajorMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/MoveFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/NullMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/PawnAttackMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/PawnEnPassantAttack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/PawnJump.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/PawnMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/PawnPromotion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/moves/moveType/QueenSideCastleMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Bishop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/King.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Knight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Pawn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece$PieceType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece$PieceType$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece$PieceType$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece$PieceType$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece$PieceType$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece$PieceType$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece$PieceType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/PieceUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Queen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/pieces/Rook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/player/BlackPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/engine/player/WhitePlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/BoardDirection$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/BoardDirection$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/BoardDirection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/GameHistoryPanel$DataModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/GameHistoryPanel$Row.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/GameHistoryPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/Table$BoardPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/Table$MoveLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/Table$TilePanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/Table$TilePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/Table.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gui/TakenPiecesPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/engine/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/engine/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/engine/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/engine/pieces/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/engine/pieces/SlidingPiecesMoveMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/engine/pieces/SlidingPiecesMoveMaker.java" afterDir="false" />
+>>>>>>> 42861e8e0ffa689a6275fbd0c455b7595a863d5e
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eDJLuHjsRFrOZyev0z52sODNvB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/engine" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.engine.player" />
+      <recent name="com.engine.board" />
+      <recent name="com.engine.pieces" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.gui" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.tests.chess.engine" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.engine.moves" />
+      <recent name="com.engine.moves.moveType" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gui" />
+      <recent name="com.engine.moves" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\uni\uniProjects\Jchess\img\pieces" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Tests in 'Jchess.test'">
+    <configuration name="TestCastling" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.tests.chess.engine.TestCastling&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCastling.testWhiteKingSideCastle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.tests.chess.engine.TestCastling.testWhiteKingSideCastle&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCheckmate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.tests.chess.engine.TestCheckmate&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'Jchess.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'com.tests.chess.engine'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.tests.chess.engine.*&quot; --scan" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'Jchess.test'" />
+        <item itemvalue="Gradle.Tests in 'com.tests.chess.engine'" />
+        <item itemvalue="Gradle.TestCastling.testWhiteKingSideCastle" />
+        <item itemvalue="Gradle.TestCastling" />
+        <item itemvalue="Gradle.TestCheckmate" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8ec8351-4a87-4504-9bd8-6377445d0479" name="Default Changelist" comment="" />
+      <created>1593850177174</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593850177174</updated>
+      <workItem from="1593850181374" duration="37316000" />
+      <workItem from="1594294283908" duration="5719000" />
+      <workItem from="1594383551244" duration="1321000" />
+      <workItem from="1594456582839" duration="4974000" />
+      <workItem from="1594461772643" duration="9638000" />
+      <workItem from="1594549358733" duration="13649000" />
+      <workItem from="1594623894253" duration="24746000" />
+      <workItem from="1594715526552" duration="30401000" />
+      <workItem from="1594794517805" duration="21218000" />
+      <workItem from="1594905841515" duration="13239000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Move CastleMove abstract class from Move.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move CastleMove abstract class from Move.java" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Project_Structure" timestamp="1594716419443">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1594716419443" />
+<<<<<<< HEAD
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1594919822631">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594919822631" />
+=======
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1594916946010">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594916946010" />
+>>>>>>> 42861e8e0ffa689a6275fbd0c455b7595a863d5e
+    <state x="477" y="165" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1594297810891">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="165" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/0.0.1536.824@0.0.1536.824" timestamp="1594297810891" />
+    <state x="618" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1594299198285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1594299198285" />
+    <state x="566" y="272" width="458" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594740857055">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="566" y="272" width="458" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1594740857055" />
+    <state x="566" y="284" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1594740778707">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="566" y="284" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1594740778707" />
+    <state x="485" y="122" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1593878974686">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="122" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1593878974686" />
+    <state x="227" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594654619121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="227" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1594654619121" />
+    <state x="393" y="7" key="CommitChangelistDialog2" timestamp="1594739375651">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594739375651" />
+    <state width="514" height="438" key="DebuggerActiveHint" timestamp="1594815022988">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="514" height="438" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1594815022988" />
+<<<<<<< HEAD
+    <state width="1493" height="283" key="GridCell.Tab.0.bottom" timestamp="1594921370640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="283" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594921370640" />
+    <state width="1493" height="283" key="GridCell.Tab.0.center" timestamp="1594921370640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="283" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594921370640" />
+    <state width="1493" height="283" key="GridCell.Tab.0.left" timestamp="1594921370640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="283" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594921370640" />
+    <state width="1493" height="283" key="GridCell.Tab.0.right" timestamp="1594921370640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="283" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594921370640" />
+=======
+    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1594918603419">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594918603419" />
+    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1594918603418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594918603418" />
+    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1594918603418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594918603418" />
+    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1594918603419">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594918603419" />
+>>>>>>> 42861e8e0ffa689a6275fbd0c455b7595a863d5e
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1594823633121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594823633121" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1594823633121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1594823633121" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1594823633121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1594823633121" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1594823633121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1594823633121" />
+    <state x="485" y="108" width="566" height="599" key="RefactorJ.ExtractClass" timestamp="1594299225750">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="108" width="566" height="599" key="RefactorJ.ExtractClass/0.0.1536.824@0.0.1536.824" timestamp="1594299225750" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1594461751289">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594461751289" />
+    <state x="584" y="190" key="chooseDestDirectoryDialog" timestamp="1593851214678">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1593851214678" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1594905847914">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594905847914" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594739356923">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1594739356923" />
+    <state x="533" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594743937580">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="533" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1594743937580" />
+    <state x="698" y="353" key="extract.method.dialog" timestamp="1594573602657">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="698" y="353" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1594573602657" />
+    <state x="463" y="10" width="609" height="804" key="find.popup" timestamp="1594461679872">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="463" y="10" width="609" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1594461679872" />
+    <state x="475" y="31" key="refactoring.ChangeSignatureDialog" timestamp="1594654628088">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="475" y="31" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1594654628088" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1594744239769">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1594744239769" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1594915797613">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594915797613" />
+  </component>
+</project>

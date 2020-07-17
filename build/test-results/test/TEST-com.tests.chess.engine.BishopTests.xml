@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tests.chess.engine.BishopTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-07-17T13:53:21" hostname="DESKTOP-3VQV89L" time="0.018">
+  <properties/>
+  <testcase name="assertBottomRightBishopOnEmptyBoardLegalMoves" classname="com.tests.chess.engine.BishopTests" time="0.015"/>
+  <testcase name="assertMiddleBishopOnEmptyBoardLegalMoves" classname="com.tests.chess.engine.BishopTests" time="0.001"/>
+  <testcase name="assertBottomLeftBishopOnEmptyBoardLegalMoves" classname="com.tests.chess.engine.BishopTests" time="0.0"/>
+  <testcase name="assertTopLeftBishopOnEmptyBoardLegalMoves" classname="com.tests.chess.engine.BishopTests" time="0.001"/>
+  <testcase name="assertTopRightBishopOnEmptyBoardLegalMoves" classname="com.tests.chess.engine.BishopTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
